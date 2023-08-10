@@ -110,13 +110,16 @@ export function createCityElement(cityInfo) {
 /**
  * Lida com o evento de submit do formulário de busca
  */
-export function handleSearch(event) {
+export const handleSearch = async (event) => {
   event.preventDefault();
   clearChildrenById('cities');
 
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
-  const foundCities = searchCities(searchValue);
+  const foundCities = await searchCities(searchValue);
 
-  foundCities.forEach(el, getWeatherByCity);
-}
+  foundCities.forEach(async (el) => {
+    const cityURL = el.url;
+    console.log(await getWeatherByCity(cityURL));
+  });
+};
