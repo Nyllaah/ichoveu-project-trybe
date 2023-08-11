@@ -99,7 +99,7 @@ export function createCityElement(cityInfo) {
   cityElement.appendChild(tempContainer);
 
   const iconElement = createElement('img', 'condition-icon');
-  iconElement.src = icon;
+  iconElement.src = icon.replace('64x64', '128x128');
 
   const infoContainer = createElement('div', 'city-info-container');
   infoContainer.appendChild(tempContainer);
