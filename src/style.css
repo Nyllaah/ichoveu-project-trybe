@@ -234,7 +234,7 @@ ul {
 
 .forecast-btn {
   width: 368px;
-  height: 46.32px;
+  height: 47px;
   border-radius: 0 0 20px 20px;
   border: 1px solid rgb(0, 176, 255);
   background-color: rgb(0, 176, 255);
@@ -250,6 +250,4 @@ ul {
 .condition-icon {
   width: 128px;
   height: 128px;
-  top: 131px;
-  left: 227px;
 }

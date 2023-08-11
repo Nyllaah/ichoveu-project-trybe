@@ -109,7 +109,7 @@ export function createCityElement(cityInfo) {
   const newBtn = createElement('button', 'forecast-btn', 'Ver previsão');
   cityElement.appendChild(newBtn);
   newBtn.addEventListener('click', async () => {
-    const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?lang=pt&key=${token}&q=${url}&days=8`);
+    const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?lang=pt&key=${token}&q=${url}&days=7`);
     const data = await res.json();
     const forcast = data.forecast.forecastday;
     const forecastList = [];
