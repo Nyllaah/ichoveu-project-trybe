@@ -79,7 +79,7 @@ export function showForecast(forecastList) {
  * Recebe um objeto com as informações de uma cidade e retorna um elemento HTML
  */
 export function createCityElement(cityInfo) {
-  const { name, country, temp, condition, /** icon, */url } = cityInfo;
+  const { name, country, temp, condition, icon, url } = cityInfo;
 
   const cityElement = createElement('li', 'city');
 
@@ -99,7 +99,7 @@ export function createCityElement(cityInfo) {
   cityElement.appendChild(tempContainer);
 
   const iconElement = createElement('img', 'condition-icon');
-  // iconElement.src = icon.replace('64x64', '128x128');
+  iconElement.src = icon;
 
   const infoContainer = createElement('div', 'city-info-container');
   infoContainer.appendChild(tempContainer);
