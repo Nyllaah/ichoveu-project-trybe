@@ -12,10 +12,10 @@ export const searchCities = async (term) => {
 export const getWeatherByCity = async (cityURL) => {
   const res = await fetch(`http://api.weatherapi.com/v1/current.json?lang=pt&key=${token}&q=${cityURL}`);
   const data = await res.json();
-  const { location: { name: nm, country: cntry },
+  const { location: { name: city, country: cntry },
     current: { temp_c: tempC, condition: { text, icon: ic } } } = data;
   return {
-    name: nm,
+    name: city,
     country: cntry,
     temp: tempC,
     condition: text,
