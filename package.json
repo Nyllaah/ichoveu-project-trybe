@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",
     "@trybe/eslint-config-frontend": "^1.11.3",
-    "cypress": "10.6.0",
+    "cypress": "^10.11.0",
     "cypress-multi-reporters": "1.6.1",
     "mocha": "10.0.0",
     "mochawesome": "7.1.3",
